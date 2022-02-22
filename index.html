@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+            <img src="data:image/png;base64,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" />
+            <h1>Python</h1>
+            <h2>Tutorial</h2>
+        </header>
+        <a id="nav-link" href="#Introduction">Introduction</a>
+        <a id="nav-link" href="#Syntax">Syntax</a>
+        <a id="nav-link" href="#Variables">Variables</a>
+        <a id="nav-link" href="#Operators">Operators</a>
+        <a id="nav-link" href="#Conditions">Conditions</a>
+        <a id="nav-link" href="#Loops">Loops</a>
+        <a id="nav-link" href="#Numbers">Numbers</a>
+        <a id="nav-link" href="#Strings">Strings</a>
+        <a id="nav-link" href="#Lists">Lists</a>
+        <a id="nav-link" href="#Tuples">Tuples</a>
+        <a id="nav-link" href="#Dictionary">Dictionary</a>
+        <a id="nav-link" href="#Date_and_Time">Date and Time</a>
+        <a id="nav-link" href="#Functions">Functions</a>
+        <a id="nav-link" href="#Modules">Modules</a>
+        <a id="nav-link" href="#Files">Files</a>
+        <a id="nav-link" href="#Exceptions">Exceptions</a>
+    </nav>
+    <main id="main-doc">
+        <section main-section id="Introduction">
+            <header>Introduction</header>
+            <p>This tutorial is made by Jhon Araujo, simplifying the content from python.org, tutorialspoint.com, w3school.com, and others.</p>
+            <p>Python is a popular high-level programming language. It was created by Guido van Rossum around 1985 and release in 1991. Python source code is available under the GNU General Public License (GPL).</p>
+            <p>It is very used for backend web development, software development, mathematics, big data, data science, system scripting and others.</p>
+            <p>Python works on different platforms like Windows, Mac, Linux, Raspberry Pi, etc.</p>
+            <p>It supports functional, structured programming methods and object oriented programming. Provides interfaces to most important databases</p>
+            <p>Python s easy to learn, read and maintain. It has some similarities to the English language.</p>
+            <p>It uses new lines only to complete a command. Python use indentation and whitespace to define the scope of loops, functions and classes.</p>
+            <p>Example:</p>
+            <code>print("Hello, World!")</code>
+            <p>Output:</p>
+            <code>Hello, World!</code>
+            <p>This tutorial gives enough understanding on Python programming language.</p>
+        </section>
+        <section main-section id="Syntax">
+            <header>Syntax</header>
+            <ul>
+                <li>
+                    <p><b>Identation</b></p>
+                    <p>Python uses indentation to indicate a block of code. Indentation refers to the spaces at the beginning of a code line. The indentation is very important.</p>
+                    <p>Example:</p>
+                    <code>
+if a > b:
+    print("A is greater than B!")
+else:
+    print("A is less than B!")
+                    </code>
+                    <p>Output while A is equal to 2 and B is equal to 1:</p>
+                    <code>A is greater than B!</code>
+                    <p>The following block will give an error, because skips the indentation.</p>
+                    <p>Example:</p>
+                    <code>
+if a > b:
+print("A is greater than B!")
+else:
+print("A is less than B!")
+                    </code>
+                    <p>Output error:</p>
+                    <code>IndentationError: expected an indented block</code>
+                </li>
+                <li>
+                    <p><b>Multiple lines</b></p>
+                    <p>Statements in Python typically end with a new line. However, it allow the use of the line continuation character (\) to denote that the line should continue.</p>
+                    <p>Example:</p>
+                    <code>
+a = b + \
+    c + \
+    d + \
+    e 
+                    </code>
+                    <p>Statements contained within the [], {}, or () brackets do not need to use the line continuation character.</p>
+                    <p>Example:</p>
+                    <code>
+number = ['one', 'two', 'three',
+    'four', 'five']
+                    </code>
+                </li>
+                <li>
+                    <p><b>Quotations</b></p>
+                    <p>Python accepts single (') and double (") quotes to denote string literals. For using the string across multiple lines, Python accepts triple (''' or """) quotes.</p>
+                    <p>Example:</p>
+                    <code>
+name = 'James'
+fullname = "James Smith."
+address = """4455 Landing Lange, APT 4 
+Louisville, KY 40018-1234."""
+                    </code>
+                </li>
+                <li>
+                    <p><b>Comments</b></p>
+                    <p>Comments start with a #, and Python will render the rest of the line as a comment.</p>
+                    <p>Example:</p>
+                    <code>
+#This is a comment.
+print("Comment example.") #End of comment
+                    </code>
+                    <p>Output:</p>
+                    <code>Comment example.</code>
+                    <p>Triple quotes can be used for multiline comment.</p>
+                    <p>Example:</p>
+                    <code>
+"""
+This is a comment.
+This is another comment.
+"""
+                    </code>
+                </li>
+                <li>
+                    <p><b>Multiple Statements in a same line</b></p>
+                    <p>The semicolon ( ; ) allows multiple statements on the single line given that neither statement starts a new code block.</p>
+                    <p>Example:</p>
+                    <code>
+name = 'James'; print("Hello, " + name)
+                    </code>
+                    </code>
+                </li>
+            </ul>
+        </section>
+        <section main-section id="Variables">
+            <header>Variables</header>
+            <p>These are some features of variables in Python:</p>
+            <ul>
+                <li class="list">A variable is created the moment of first assign a value to it. Python no needs command for declaring.</li>
+                <li class="list">It Is possible assign a single value to several variables simultaneously.</li>
+                <li class="list">Python has five standard data types; numbers, strings, lists, tuples, and dictionaries.</li>
+                <li class="list">Variables are case sensitive.</li>
+                <li class="list">Variables can be reassigned.</li>
+                <li class="list">Variables can be combined with other variables.</li>
+                <li class="list">String variables can be declared either by using single or double quotes</li>
+                <li class="list">With type() Function, you can check the type of a variable.</li>
+                <li class="list">It Is possible specify the data type of a variableh with casting; str(), int(), float()</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+a = 3
+A = 4
+b = "John"
+b = 'John'
+a = "Sally" # a is now of type string
+x = str(3) # x will be '3'
+y = int(3) # y will be 3
+z = float(3) # z will be 3.0
+print(type(a))
+print(type(b))
+            </code>
+        </section>
+        <section main-section id="Operators">
+            <header>Operators</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Conditions">
+            <header>Conditions</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Loops">
+            <header>Loops</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Numbers">
+            <header>Numbers</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Strings">
+            <header>Strings</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Lists">
+            <header>Lists</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Tuples">
+            <header>Tuples</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Dictionary">
+            <header>Dictionary</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Date_and_Time">
+            <header>Date and Time</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Functions">
+            <header>Functions</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Modules">
+            <header>Modules</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Files">
+            <header>Files</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section main-section id="Exceptions">
+            <header>Exceptions</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
